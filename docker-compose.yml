@@ -1,0 +1,14 @@
+bdr:
+  build: .
+  container_name: bdr
+  command: "/data/php-apache.sh"
+  volumes:
+    - .:/var/www/bdr
+    - ./docker/apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+    - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+    - ./docker/php:/data
+  ports:
+    - "80:80"
+  environment:
+    APACHE_LOG_DIR: /var/log/apache2
+  working_dir: /var/www/bdr
