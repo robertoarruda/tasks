@@ -12,7 +12,7 @@
 
 Entre no diretório do projeto `cd bdr`
 
-Setar permissão no dir storage `chmod -R 777 api/app/tmp`
+Setar permissão `mkdir -m 777 api/app/tmp` ou se já existir `chmod -R 777 api/app/tmp`
 
 Levante o docker do projeto `docker-compose up -d`
 
